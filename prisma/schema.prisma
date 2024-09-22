@@ -19,7 +19,8 @@ model admin {
   name      String
   email     String
   password  String
-  secretKey String
+  profilePath String
+
 }
 
 // vendor

@@ -6,10 +6,20 @@ import cors from 'cors'
 import process from 'process'
 import ApiRoutes from './routes/api.js'
 const ncpus = numCPUs.cpus().length
+import path from 'path'
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
 
 
 const app = express()
 app.use(cors())
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.json())
 app.use('/api/v1',ApiRoutes)
 
