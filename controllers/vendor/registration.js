@@ -12,7 +12,7 @@ export const register  = async(req,res)=>{
         res.status(200).json({status:200,msg:'registered'})
     } catch (error) {
         console.log(error)
-        res.status(500).json({status:500,msg:'Something went wrong'})
+        res.status(500).json({status:500,msg:'Something went wrong',error})
     }
 }
 

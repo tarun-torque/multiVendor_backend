@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "npx prisma generate && prisma migrate deploy && node server.js",
     "dev": "chokidar 'server.js' -c 'npm start'"
   },
   "type": "module",
